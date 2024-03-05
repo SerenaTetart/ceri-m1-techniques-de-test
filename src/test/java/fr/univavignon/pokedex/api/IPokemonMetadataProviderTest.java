@@ -21,7 +21,7 @@ public class IPokemonMetadataProviderTest {
         Mockito.when(provider.getPokemonMetadata(0)).thenReturn(
                 new PokemonMetadata(0, "Bulbizarre", 126, 126, 90)
         );
-        Mockito.when(provider.getPokemonMetadata(0)).thenReturn(
+        Mockito.when(provider.getPokemonMetadata(133)).thenReturn(
                 new PokemonMetadata(133, "Aquali", 186, 168, 260)
         );
 
