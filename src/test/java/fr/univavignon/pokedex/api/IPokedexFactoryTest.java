@@ -4,10 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -20,10 +17,11 @@ public class IPokedexFactoryTest {
     IPokedex pokedex;
     @BeforeEach
     public void setup() {
-        IPokedexFactory pokedexFactory = mock(IPokedexFactory.class);
-        IPokemonMetadataProvider metadataProvider = mock(IPokemonMetadataProvider.class);
-        IPokemonFactory pokemonFactory = mock(IPokemonFactory.class);
-        IPokedex pokedex = mock(IPokedex.class);
+        MockitoAnnotations.openMocks(this);
+        //IPokedexFactory pokedexFactory = mock(IPokedexFactory.class);
+        //IPokemonMetadataProvider metadataProvider = mock(IPokemonMetadataProvider.class);
+        //IPokemonFactory pokemonFactory = mock(IPokemonFactory.class);
+        //IPokedex pokedex = mock(IPokedex.class);
     }
     @Test
     public void someTest() throws PokedexException {
