@@ -34,14 +34,14 @@ public class IPokemonFactoryTest {
         assertEquals(Bulbizarre.getName(), "Bulbizarre");
         assertEquals(Bulbizarre.getIndex(), 0);
         assertTrue(Bulbizarre.getAttack() >= 126 && Bulbizarre.getAttack() <= 126+15);
-        assertTrue(Bulbizarre.getDefense() >= 126 && Bulbizarre.getAttack() <= 126+15);
-        assertTrue(Bulbizarre.getStamina() >= 90 && Bulbizarre.getAttack() <= 90+15);
+        assertTrue(Bulbizarre.getDefense() >= 126 && Bulbizarre.getDefense() <= 126+15);
+        assertTrue(Bulbizarre.getStamina() >= 90 && Bulbizarre.getStamina() <= 90+15);
 
         PokemonMetadata Aquali = factory.createPokemon(133, 2729, 202, 5000, 4);
         assertEquals(Aquali.getName(), "Aquali");
         assertEquals(Aquali.getIndex(), 133);
         assertTrue(Aquali.getAttack() >= 186 && Aquali.getAttack() <= 186+15);
-        assertTrue(Aquali.getDefense() >= 168 && Aquali.getAttack() <= 168+15);
-        assertTrue(Aquali.getStamina() >= 260 && Aquali.getAttack() <= 260+15);
+        assertTrue(Aquali.getDefense() >= 168 && Aquali.getDefense() <= 168+15);
+        assertTrue(Aquali.getStamina() >= 260 && Aquali.getStamina() <= 260+15);
     }
 }
