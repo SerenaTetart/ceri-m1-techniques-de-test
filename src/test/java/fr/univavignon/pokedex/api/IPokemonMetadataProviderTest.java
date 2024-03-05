@@ -27,15 +27,15 @@ public class IPokemonMetadataProviderTest {
 
         PokemonMetadata Bulbizarre = provider.getPokemonMetadata(0);
         assertEquals(Bulbizarre.getName(), "Bulbizarre");
-        assertEquals(Bulbizarre.getAttack(), 126);
         assertEquals(Bulbizarre.getIndex(), 0);
-        assertEquals(Bulbizarre.getDefense(), 168);
-        assertEquals(Bulbizarre.getStamina(), 260);
+        assertEquals(Bulbizarre.getAttack(), 126);
+        assertEquals(Bulbizarre.getDefense(), 126);
+        assertEquals(Bulbizarre.getStamina(), 90);
 
         PokemonMetadata Aquali = provider.getPokemonMetadata(133);
         assertEquals(Aquali.getName(), "Aquali");
-        assertEquals(Aquali.getAttack(), 186);
         assertEquals(Aquali.getIndex(), 133);
+        assertEquals(Aquali.getAttack(), 186);
         assertEquals(Aquali.getDefense(), 168);
         assertEquals(Aquali.getStamina(), 260);
     }
