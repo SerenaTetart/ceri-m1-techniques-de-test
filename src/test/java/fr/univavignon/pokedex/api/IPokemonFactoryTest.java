@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -15,7 +16,7 @@ public class IPokemonFactoryTest {
     @Mock
     IPokemonFactory factory;
 
-    @Before
+    @BeforeEach
     public void setup() {
         IPokemonFactory factory = mock(IPokemonFactory.class);
     }
