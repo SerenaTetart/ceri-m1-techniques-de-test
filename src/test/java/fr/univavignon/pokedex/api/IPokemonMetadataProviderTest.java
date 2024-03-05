@@ -3,6 +3,7 @@ package fr.univavignon.pokedex.api;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -10,6 +11,10 @@ import org.mockito.Mockito;
 public class IPokemonMetadataProviderTest {
 	@Mock
     IPokemonMetadataProvider provider;
+    @Before
+    public void setup() {
+        IPokemonMetadataProvider provider = mock(IPokemonMetadataProvider.class);
+    }
     @Test
     public void someTest() throws PokedexException {
         IPokemonMetadataProvider providerTest = provider;

@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -16,7 +17,10 @@ import java.util.Random;
 public class IPokedexTest {
     @Mock
     IPokedex pokedex;
-
+    @Before
+    public void setup() {
+        IPokedex pokedex = mock(IPokedex.class);
+    }
     @Test
     public void someTest() throws PokedexException {
         IPokedex pokedexTest = pokedex;
