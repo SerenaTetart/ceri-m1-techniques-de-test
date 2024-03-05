@@ -12,21 +12,22 @@ public class IPokemonMetadataProviderTest {
     IPokemonMetadataProvider provider;
     @Test
     public void someTest() throws PokedexException {
-        Mockito.when(provider.getPokemonMetadata(0)).thenReturn(
+        IPokemonMetadataProvider providerTest = provider;
+        Mockito.when(providerTest.getPokemonMetadata(0)).thenReturn(
                 new PokemonMetadata(0, "Bulbizarre", 126, 126, 90)
         );
-        Mockito.when(provider.getPokemonMetadata(0)).thenReturn(
+        Mockito.when(providerTest.getPokemonMetadata(0)).thenReturn(
                 new PokemonMetadata(133, "Aquali", 186, 168, 260)
         );
 
-        PokemonMetadata Bulbizarre = provider.getPokemonMetadata(0);
+        PokemonMetadata Bulbizarre = providerTest.getPokemonMetadata(0);
         assertEquals(Bulbizarre.getName(), "Bulbizarre");
         assertEquals(Bulbizarre.getAttack(), 126);
         assertEquals(Bulbizarre.getIndex(), 0);
         assertEquals(Bulbizarre.getDefense(), 168);
         assertEquals(Bulbizarre.getStamina(), 260);
 
-        PokemonMetadata Aquali = provider.getPokemonMetadata(133);
+        PokemonMetadata Aquali = providerTest.getPokemonMetadata(133);
         assertEquals(Aquali.getName(), "Aquali");
         assertEquals(Aquali.getAttack(), 186);
         assertEquals(Aquali.getIndex(), 133);

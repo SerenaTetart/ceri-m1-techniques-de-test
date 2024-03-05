@@ -19,26 +19,27 @@ public class IPokedexTest {
 
     @Test
     public void someTest() throws PokedexException {
-        Mockito.when(pokedex.size()).thenReturn(0, 1, 2);
+        IPokedex pokedexTest = pokedex;
+        Mockito.when(pokedexTest.size()).thenReturn(0, 1, 2);
         Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
         Pokemon Aquali = new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
-        Mockito.when(pokedex.addPokemon(Bulbizarre)).thenReturn(0);
-        Mockito.when(pokedex.addPokemon(Aquali)).thenReturn(1);
-        Mockito.when(pokedex.getPokemon(0)).thenReturn(Bulbizarre);
-        Mockito.when(pokedex.getPokemon(133)).thenReturn(Aquali);
-        Mockito.when(pokedex.getPokemons()).thenReturn(new ArrayList<Pokemon>(Arrays.asList(Bulbizarre, Aquali)));
+        Mockito.when(pokedexTest.addPokemon(Bulbizarre)).thenReturn(0);
+        Mockito.when(pokedexTest.addPokemon(Aquali)).thenReturn(1);
+        Mockito.when(pokedexTest.getPokemon(0)).thenReturn(Bulbizarre);
+        Mockito.when(pokedexTest.getPokemon(133)).thenReturn(Aquali);
+        Mockito.when(pokedexTest.getPokemons()).thenReturn(new ArrayList<Pokemon>(Arrays.asList(Bulbizarre, Aquali)));
 
-        int size = pokedex.size();
+        int size = pokedexTest.size();
         assertEquals(size, 0);
-        int index = pokedex.addPokemon(Bulbizarre);
+        int index = pokedexTest.addPokemon(Bulbizarre);
         assertEquals(index, 0);
-        size = pokedex.size();
+        size = pokedexTest.size();
         assertEquals(size, 1);
-        index = pokedex.addPokemon(Aquali);
+        index = pokedexTest.addPokemon(Aquali);
         assertEquals(index, 1);
-        size = pokedex.size();
+        size = pokedexTest.size();
         assertEquals(size, 2);
-        List<Pokemon> pokemons = pokedex.getPokemons();
+        List<Pokemon> pokemons = pokedexTest.getPokemons();
         assertEquals(pokemons.size(), 2);
         assertEquals(pokemons.get(0), Bulbizarre);
         assertEquals(pokemons.get(1), Aquali);
