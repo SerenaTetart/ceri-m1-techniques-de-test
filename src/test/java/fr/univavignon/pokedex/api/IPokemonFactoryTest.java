@@ -27,7 +27,7 @@ public class IPokemonFactoryTest {
                 new Pokemon(0, "Bulbizarre", 126+rand.nextInt(16), 126+rand.nextInt(16), 90+rand.nextInt(16), 613, 64, 4000, 4, 56)
         );
         Mockito.when(factory.createPokemon(133, 2729, 202, 5000, 4)).thenReturn(
-                new Pokemon(0, "Aquali", 186+rand.nextInt(16), 168+rand.nextInt(16), 260+rand.nextInt(16), 2729, 202, 5000, 4, 100)
+                new Pokemon(133, "Aquali", 186+rand.nextInt(16), 168+rand.nextInt(16), 260+rand.nextInt(16), 2729, 202, 5000, 4, 100)
         );
 
         PokemonMetadata Bulbizarre = factory.createPokemon(0, 613, 64, 4000, 4);
