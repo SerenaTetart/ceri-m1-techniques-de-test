@@ -7,13 +7,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 public class IPokemonMetadataProviderTest {
 	@Mock
     IPokemonMetadataProvider provider;
     @BeforeEach
     public void setup() {
-        IPokemonMetadataProvider provider = mock(IPokemonMetadataProvider.class);
+        MockitoAnnotations.openMocks(this);
     }
     @Test
     public void someTest() throws PokedexException {

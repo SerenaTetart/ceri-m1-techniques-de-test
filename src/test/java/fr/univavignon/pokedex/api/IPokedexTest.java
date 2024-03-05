@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +20,7 @@ public class IPokedexTest {
     IPokedex pokedex;
     @BeforeEach
     public void setup() {
-        IPokedex pokedex = mock(IPokedex.class);
+        MockitoAnnotations.openMocks(this);
     }
     @Test
     public void someTest() throws PokedexException {

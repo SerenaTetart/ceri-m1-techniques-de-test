@@ -17,7 +17,7 @@ public class IPokemonFactoryTest {
 
     @BeforeEach
     public void setup() {
-        IPokemonFactory factory = mock(IPokemonFactory.class);
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
