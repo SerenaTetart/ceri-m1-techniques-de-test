@@ -1,34 +1,34 @@
 version: 2.1
 
 orbs:
-  codecov: codecov/codecov@4.0.1
-  
+    codecov: codecov/codecov@4.0.1
+
 jobs:
-  build-and-test:
-    docker:
-      - image: cimg/openjdk:17.0
-    steps:
-      - checkout
-      - run:
-          name: Run Maven Test
-          command: mvn test
-  codecov-upload:
-    steps:
-      - run:
-          name: Upload coverage reports to Codecov
-          uses: codecov/codecov-action@v4.0.1
-          with:
-            token: ${{ secrets.CODECOV_TOKEN }}
-            slug: SerenaTetart/ceri-m1-techniques-de-test
+    build-and-test:
+        docker:
+            - image: cimg/openjdk:17.0
+        steps:
+            - checkout
+            - run:
+                name: Run Maven Test
+                command: mvn test
+    codecov-upload:
+        steps:
+            - run:
+                name: Upload coverage reports to Codecov
+                uses: codecov/codecov-action@v4.0.1
+                with:
+                    token: ${{ secrets.CODECOV_TOKEN }}
+                    slug: SerenaTetart/ceri-m1-techniques-de-test
 
 workflows:
-  version: 2
-  build-and-test-on-master:
-    jobs:
-      - build-and-test:
-          filters:
-            branches:
-              only: master
-  upload-to-codecov:
-    jobs:
-        - codecov-upload
+    version: 2
+    build-and-test-on-master:
+        jobs:
+            - build-and-test:
+                filters:
+                    branches:
+                        only: master
+    upload-to-codecov:
+        jobs:
+            - codecov-upload
