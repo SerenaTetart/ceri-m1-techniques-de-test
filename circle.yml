@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Run Maven Test
           command: mvn test
-  upload-to-codecov:
+  codecov-upload:
     name: Upload coverage reports to Codecov
     command: |
         curl -X POST \
