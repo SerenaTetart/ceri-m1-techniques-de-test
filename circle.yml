@@ -1,21 +1,28 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@4.0.1
 jobs:
-    build-and-test:
-        docker:
-            - image: cimg/openjdk:17.0
-        steps:
-            - checkout
-            - run:
-                name: Run Maven Test
-                command: mvn test
-    
+  build-and-test:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Run Maven Test
+          command: mvn test
 
+# Job
 workflows:
-    version: 2
-    build-and-test-on-master:
-        jobs:
-            - build-and-test:
-                filters:
-                    branches:
-                        only: master
+  version: 2
+  build-and-test-on-master:
+    jobs:
+      - build-and-test:
+          filters:
+            branches:
+              only: master
+  upload-to-codecov:
+    jobs:
+        - codecov/upload:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            flags: "all"
