@@ -23,6 +23,4 @@ workflows:
               only: master
   upload-to-codecov:
     jobs:
-        - codecov-upload:
-            token: ${{ secrets.CODECOV_TOKEN }}
-            flags: "all"
+        - codecov/upload
