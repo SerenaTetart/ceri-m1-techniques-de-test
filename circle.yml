@@ -23,4 +23,5 @@ workflows:
                         only: master
     upload-to-codecov:
         jobs:
-            - codecov/upload
+            - run:
+                command: bash <(curl -s https://codecov.io/bash)
