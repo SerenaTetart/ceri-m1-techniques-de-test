@@ -12,7 +12,6 @@ jobs:
             - run:
                 name: Run Maven Test
                 command: mvn test
-                command: bash <(curl -s https://codecov.io/bash)
     
 
 workflows:
@@ -23,3 +22,6 @@ workflows:
                 filters:
                     branches:
                         only: master
+    upload-to-codecov:
+        jobs:
+            command: bash <(curl -s https://codecov.io/bash)
