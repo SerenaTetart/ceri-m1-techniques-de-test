@@ -15,10 +15,7 @@ jobs:
   codecov-upload:
     name: Upload coverage reports to Codecov
     command: |
-        curl -X POST \
-            -H "Content-Type: application/json" \
-            -d '{"token": "${{ secrets.CODECOV_TOKEN }}", "flags": "all"}' \
-            https://codecov.io/upload/v4
+        curl -X POST -H "Content-Type: application/json" -d '{"token": "${{ secrets.CODECOV_TOKEN }}", "flags": "all"}' https://codecov.io/upload/v4
 
 workflows:
   version: 2
