@@ -13,9 +13,9 @@ jobs:
           name: Run Maven Test
           command: mvn test
       - run:
-        name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
-        with:
+          name: Upload coverage reports to Codecov
+          uses: codecov/codecov-action@v4.0.1
+          with:
             token: ${{ secrets.CODECOV_TOKEN }}
             slug: SerenaTetart/ceri-m1-techniques-de-test
 
