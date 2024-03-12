@@ -30,4 +30,4 @@ workflows:
               only: master
   upload-to-codecov:
     jobs:
-        - codecov/upload
+        - codecov-upload
