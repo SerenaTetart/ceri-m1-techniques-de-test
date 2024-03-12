@@ -1,6 +1,8 @@
 version: 8.0
 
 # Define all the job we need to run the project
+orbs:
+  codecov: codecov/codecov@4.0.1
 jobs:
   build-and-test:
     docker:
@@ -10,6 +12,13 @@ jobs:
       - run:
           name: Run Maven Test
           command: mvn test
+  codecov-upload:
+    steps:
+      - checkout
+      - run:
+          name: Upload coverage to Codecov
+          command: bash <(curl -s https://codecov.io/bash) -t 5d986fcd-2a5a-4a80-bf24-5e858832ebc4
+          when: always
 
 # Job
 workflows:
@@ -20,3 +29,6 @@ workflows:
           filters:
             branches:
               only: master
+  upload-to-codecov:
+    jobs:
+        - codecov-upload
