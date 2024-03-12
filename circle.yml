@@ -1,6 +1,5 @@
-version: 8.0
+version: 2.1
 
-# Define all the job we need to run the project
 orbs:
   codecov: codecov/codecov@4.0.1
 jobs:
