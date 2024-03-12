@@ -23,6 +23,3 @@ workflows:
                 filters:
                     branches:
                         only: master
-    upload-to-codecov:
-        jobs:
-            - upload-codecov
