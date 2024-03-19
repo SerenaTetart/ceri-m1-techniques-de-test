@@ -10,19 +10,9 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 public class IPokemonMetadataProviderTest {
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
-    }
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
-        Mockito.when(pokedex.getPokemonMetadata(0)).thenReturn(
-                new PokemonMetadata(0, "Bulbizarre", 126, 126, 90)
-        );
-        Mockito.when(pokedex.getPokemonMetadata(133)).thenReturn(
-                new PokemonMetadata(133, "Aquali", 186, 168, 260)
-        );
 
         PokemonMetadata Bulbizarre = pokedex.getPokemonMetadata(0);
         assertEquals(Bulbizarre.getName(), "Bulbizarre");

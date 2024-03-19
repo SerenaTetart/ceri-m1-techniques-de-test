@@ -16,21 +16,11 @@ import java.util.List;
 import java.util.Random;
 
 public class IPokedexTest {
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
-    }
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
-        Mockito.when(pokedex.size()).thenReturn(0, 1, 2);
         Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
         Pokemon Aquali = new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
-        Mockito.when(pokedex.addPokemon(Bulbizarre)).thenReturn(0);
-        Mockito.when(pokedex.addPokemon(Aquali)).thenReturn(1);
-        Mockito.when(pokedex.getPokemon(0)).thenReturn(Bulbizarre);
-        Mockito.when(pokedex.getPokemon(133)).thenReturn(Aquali);
-        Mockito.when(pokedex.getPokemons()).thenReturn(new ArrayList<Pokemon>(Arrays.asList(Bulbizarre, Aquali)));
 
         int size = pokedex.size();
         assertEquals(size, 0);
