@@ -2,6 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test.svg?style=svg)](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test)
 
+[![codecov](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test/graph/badge.svg?token=KEMV4XR2ZF)](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test)
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
