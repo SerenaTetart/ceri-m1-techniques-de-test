@@ -1,8 +1,8 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
-Nom: Tetart
+**Nom: Tetart
 Prenom: Serena
-Groupe: M1 IA
+Groupe: M1 IA**
 
 [![codecov](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test/graph/badge.svg?token=KEMV4XR2ZF)](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test)
 
