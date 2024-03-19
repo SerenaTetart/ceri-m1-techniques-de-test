@@ -1,6 +1,6 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+[![CircleCI](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test.svg?style=svg)](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test)
 
 ## Introduction
 
