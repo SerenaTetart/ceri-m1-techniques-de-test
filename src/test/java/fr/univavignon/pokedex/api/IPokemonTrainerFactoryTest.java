@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class IPokemonTrainerFactoryTest {
     @Mock
-    IPokemonTrainerFactory pokemonTrainerFactory;
-    IPokedexFactory pokedexFactory;
-    IPokedex pokedex_1;
-    IPokedex pokedex_2;
+    PokemonTrainerFactory pokemonTrainerFactory;
+    PokedexFactory pokedexFactory;
+    Pokedex pokedex_1;
+    Pokedex pokedex_2;
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);

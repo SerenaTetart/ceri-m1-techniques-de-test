@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class IPokedexTest {
     @Mock
-    IPokedex pokedex;
+    Pokedex pokedex;
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);

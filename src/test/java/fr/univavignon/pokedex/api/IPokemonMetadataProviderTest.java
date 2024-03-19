@@ -11,7 +11,7 @@ import org.mockito.MockitoAnnotations;
 
 public class IPokemonMetadataProviderTest {
 	@Mock
-    IPokemonMetadataProvider provider;
+    PokemonMetadataProvider provider;
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);

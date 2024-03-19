@@ -11,10 +11,10 @@ import static org.mockito.Mockito.mock;
 
 public class IPokedexFactoryTest {
     @Mock
-    IPokedexFactory pokedexFactory;
-    IPokemonMetadataProvider metadataProvider;
-    IPokemonFactory pokemonFactory;
-    IPokedex pokedex;
+    PokedexFactory pokedexFactory;
+    PokemonMetadataProvider metadataProvider;
+    PokemonFactory pokemonFactory;
+    Pokedex pokedex;
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);

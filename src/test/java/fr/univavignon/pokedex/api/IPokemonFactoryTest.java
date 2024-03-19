@@ -13,7 +13,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.Random;
 public class IPokemonFactoryTest {
     @Mock
-    IPokemonFactory factory;
+    PokemonFactory factory;
 
     @BeforeEach
     public void setup() {
