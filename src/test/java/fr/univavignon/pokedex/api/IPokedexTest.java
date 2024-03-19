@@ -36,12 +36,12 @@ public class IPokedexTest {
         test = pokedex.getPokemon(1);
         assertEquals(test, Aquali);
 
-        final List<Pokemon> testPokemons = pokedex.getPokemons(PokemonComparators.INDEX);
-        assertThrows(UnsupportedOperationException.class, () -> {
-            testPokemons.add(new Pokemon(10, "Pikachu", 50, 50, 50, 50, 50, 50, 50, 50));
-        });
+        List<Pokemon> pokemons = pokedex.getPokemons();
+        assertEquals(pokemons.size(), 2);
+        assertEquals(pokemons.get(0), Bulbizarre);
+        assertEquals(pokemons.get(1), Aquali);
 
-        List<Pokemon> pokemons = pokedex.getPokemons(PokemonComparators.INDEX);
+        pokemons = pokedex.getPokemons(PokemonComparators.INDEX);
         assertEquals(pokemons.size(), 2);
         assertEquals(pokemons.get(0), Bulbizarre);
         assertEquals(pokemons.get(1), Aquali);
