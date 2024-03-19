@@ -63,7 +63,7 @@ public class Pokedex implements IPokedex {
             int atk = metadata.getAttack() + random.nextInt(16);
             int def = metadata.getDefense() + random.nextInt(16);
             int stamina = metadata.getStamina() + random.nextInt(16);
-            pokemon = new Pokemon(index, metadata.getName(), atk, def, stamina, cp, hp, dust, candy, 100);
+            pokemon = new Pokemon(index, metadata.getName(), atk, def, stamina, cp, hp, dust, candy, 50);
         } catch (PokedexException e) {
             throw new RuntimeException(e);
         }
