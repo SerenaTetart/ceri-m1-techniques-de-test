@@ -10,6 +10,10 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 public class IPokemonMetadataProviderTest {
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());

@@ -12,7 +12,10 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.Random;
 public class IPokemonFactoryTest {
-
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());

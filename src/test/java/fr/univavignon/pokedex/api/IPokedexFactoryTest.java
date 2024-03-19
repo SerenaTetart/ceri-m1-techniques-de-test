@@ -10,6 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
 public class IPokedexFactoryTest {
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
     @Test
     public void someTest() throws PokedexException {
         PokedexFactory pokedexFactory = new PokedexFactory();

@@ -16,6 +16,10 @@ import java.util.List;
 import java.util.Random;
 
 public class IPokedexTest {
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
