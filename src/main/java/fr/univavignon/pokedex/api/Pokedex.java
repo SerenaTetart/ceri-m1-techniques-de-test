@@ -20,7 +20,7 @@ public class Pokedex implements IPokedex {
 
     @Override
     public int size() {
-        return pokemonList.size()-1;
+        return pokemonList.size();
     }
 
     @Override
