@@ -1,5 +1,6 @@
 package fr.univavignon.pokedex.api;
 
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -13,6 +14,10 @@ public class IPokemonMetadataProviderTest {
     @Test
     public void someTest() throws PokedexException {
         Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
+
+        assertThrows(PokedexException.class, () -> {
+            pokedex.getPokemonMetadata(-1);
+        });
 
         PokemonMetadata Bulbizarre = pokedex.getPokemonMetadata(0);
         assertEquals(Bulbizarre.getName(), "Bulbizarre");
