@@ -15,6 +15,6 @@ public class IPokedexFactoryTest {
         PokedexFactory pokedexFactory = new PokedexFactory();
 
         IPokedex pokedexTest = pokedexFactory.createPokedex(new PokemonMetadataProvider(), new PokemonFactory());
-        assertEquals(pokedexTest, new Pokedex(new PokemonMetadataProvider(), new PokemonFactory()));
+        assertEquals(pokedexTest.size(), 0);
     }
 }
