@@ -39,5 +39,9 @@ public class IPokedexTest {
         assertEquals(pokemons.size(), 2);
         assertEquals(pokemons.get(0), Bulbizarre);
         assertEquals(pokemons.get(1), Aquali);
+
+        pokemons.sort(PokemonComparators.NAME);
+        assertEquals(pokemons.get(0), Aquali);
+        assertEquals(pokemons.get(1), Bulbizarre);
     }
 }
