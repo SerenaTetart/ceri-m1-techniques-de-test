@@ -20,7 +20,7 @@ public class Pokedex implements IPokedex {
 
     @Override
     public int size() {
-        return pokemonList.size();
+        return pokemonList.size()-1;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class Pokedex implements IPokedex {
             int atk = metadata.getAttack() + random.nextInt(16);
             int def = metadata.getDefense() + random.nextInt(16);
             int stamina = metadata.getStamina() + random.nextInt(16);
-            Pokemon newPoke = new Pokemon(index, metadata.getName(), atk, def, stamina, cp, hp, dust, candy, 100);
+            pokemon = new Pokemon(index, metadata.getName(), atk, def, stamina, cp, hp, dust, candy, 100);
         } catch (PokedexException e) {
             throw new RuntimeException(e);
         }
