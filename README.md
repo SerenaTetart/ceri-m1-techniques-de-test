@@ -1,6 +1,16 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
+<<<<<<< HEAD
 [![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=<YOUR_STATUS_API_TOKEN>)](<LINK>)
+=======
+**Nom: Tetart
+Prenom: Serena
+Groupe: M1 IA**
+
+[![codecov](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test/graph/badge.svg?token=KEMV4XR2ZF)](https://codecov.io/gh/SerenaTetart/ceri-m1-techniques-de-test)
+
+[![CircleCI](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test.svg?style=svg)](https://circleci.com/gh/SerenaTetart/ceri-m1-techniques-de-test)
+>>>>>>> 71cc3f1d672a52caa18fd31c18cf7a9a20a9dca4
 
 ## Introduction
 
