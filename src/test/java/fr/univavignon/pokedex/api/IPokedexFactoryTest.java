@@ -10,20 +10,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
 public class IPokedexFactoryTest {
-    @Mock
-    PokedexFactory pokedexFactory;
-    PokemonMetadataProvider metadataProvider;
-    PokemonFactory pokemonFactory;
-    Pokedex pokedex;
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
     }
     @Test
     public void someTest() throws PokedexException {
-        Mockito.when(pokedexFactory.createPokedex(metadataProvider, pokemonFactory)).thenReturn(pokedex);
+        PokedexFactory pokedexFactory = new PokedexFactory();
+        Mockito.when(pokedexFactory.createPokedex(new PokemonMetadataProvider(), new PokemonFactory())).thenReturn(new Pokedex(new PokemonMetadataProvider(), new PokemonFactory()));
 
-        IPokedex pokedexTest = pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
-        assertEquals(pokedexTest, pokedex);
+        IPokedex pokedexTest = pokedexFactory.createPokedex(new PokemonMetadataProvider(), new PokemonFactory());
+        assertEquals(pokedexTest, new Pokedex(new PokemonMetadataProvider(), new PokemonFactory()));
     }
 }

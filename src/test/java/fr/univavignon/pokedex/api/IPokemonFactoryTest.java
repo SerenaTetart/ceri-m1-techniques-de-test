@@ -12,16 +12,10 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.Random;
 public class IPokemonFactoryTest {
-    @Mock
-    Pokedex pokedex;
-
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     public void someTest() throws PokedexException {
+        Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
         Random rand = new Random();
         Mockito.when(pokedex.createPokemon(0, 613, 64, 4000, 4)).thenReturn(
                 new Pokemon(0, "Bulbizarre", 126+rand.nextInt(16), 126+rand.nextInt(16), 90+rand.nextInt(16), 613, 64, 4000, 4, 56)

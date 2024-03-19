@@ -16,14 +16,9 @@ import java.util.List;
 import java.util.Random;
 
 public class IPokedexTest {
-    @Mock
-    Pokedex pokedex;
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
-    }
     @Test
     public void someTest() throws PokedexException {
+        Pokedex pokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
         Mockito.when(pokedex.size()).thenReturn(0, 1, 2);
         Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
         Pokemon Aquali = new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
