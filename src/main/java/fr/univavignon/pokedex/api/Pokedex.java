@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class Pokedex implements IPokedex {
 
@@ -55,6 +56,17 @@ public class Pokedex implements IPokedex {
 
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-        return pokemonFactory.createPokemon(index, cp, hp, dust, candy);
+        Pokemon pokemon = pokemonFactory.createPokemon(index, cp, hp, dust, candy);
+        try {
+            PokemonMetadata metadata = getPokemonMetadata(index);
+            Random random = new Random();
+            int atk = metadata.getAttack() + random.nextInt(16);
+            int def = metadata.getDefense() + random.nextInt(16);
+            int stamina = metadata.getStamina() + random.nextInt(16);
+            Pokemon newPoke = new Pokemon(index, metadata.getName(), atk, def, stamina, cp, hp, dust, candy, 100);
+        } catch (PokedexException e) {
+            throw new RuntimeException(e);
+        }
+        return pokemon;
     }
 }
