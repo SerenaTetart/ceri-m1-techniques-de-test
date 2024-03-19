@@ -20,11 +20,9 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
         // Implémentez la logique pour récupérer les métadonnées du Pokémon
         // Vous pouvez accéder à une source de données (par exemple une base de données, un fichier de configuration, etc.) pour obtenir les métadonnées
         // Ici, nous simulons simplement la création de métadonnées avec des valeurs arbitraires
-        if (index < 0 || index >= 151) {
+        if (index < 0 || index >= metadataList.size()) {
             throw new PokedexException("Invalid Pokemon index.");
         }
-        PokemonMetadata metadata = metadataList.get(index);
-        if(metadata == null) throw new PokedexException("Invalid Pokemon index.");
-        return metadata;
+        return metadataList.get(index);
     }
 }
