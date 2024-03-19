@@ -26,7 +26,7 @@ public class Pokedex implements IPokedex {
     @Override
     public int addPokemon(Pokemon pokemon) {
         pokemonList.add(pokemon);
-        return pokemonList.size(); // Index starts from 0
+        return pokemonList.size()-1; // Index starts from 0
     }
 
     @Override
