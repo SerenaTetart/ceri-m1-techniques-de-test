@@ -17,6 +17,10 @@ public class IPokedexTest {
             pokedex.getPokemon(-1);
         });
 
+        assertThrows(PokedexException.class, () -> {
+            pokedex.getPokemon(1000);
+        });
+
         int size = pokedex.size();
         assertEquals(size, 0);
         int index = pokedex.addPokemon(Bulbizarre);
@@ -27,6 +31,10 @@ public class IPokedexTest {
         assertEquals(index, 1);
         size = pokedex.size();
         assertEquals(size, 2);
+        Pokemon test = pokedex.getPokemon(0);
+        assertEquals(test, Bulbizarre);
+        test = pokedex.getPokemon(1);
+        assertEquals(test, Aquali);
         List<Pokemon> pokemons = pokedex.getPokemons();
         assertEquals(pokemons.size(), 2);
         assertEquals(pokemons.get(0), Bulbizarre);

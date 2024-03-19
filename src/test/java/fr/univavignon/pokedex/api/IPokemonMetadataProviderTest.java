@@ -3,11 +3,7 @@ package fr.univavignon.pokedex.api;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 
 public class IPokemonMetadataProviderTest {
     @Test
@@ -16,6 +12,10 @@ public class IPokemonMetadataProviderTest {
 
         assertThrows(PokedexException.class, () -> {
             pokedex.getPokemonMetadata(-1);
+        });
+
+        assertThrows(PokedexException.class, () -> {
+            pokedex.getPokemonMetadata(152);
         });
 
         PokemonMetadata Bulbizarre = pokedex.getPokemonMetadata(0);
