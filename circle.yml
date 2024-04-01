@@ -12,11 +12,10 @@ jobs:
           command: mvn test
       - store_artifacts:
           path: target
-      - codecov/upload
       - run:
-        command:
-            - mvn checkstyle:checkstyle
-            - cat checkstyle-result.xml
+          name: Run Checkstyle
+          command: mvn checkstyle:check
+      - codecov/upload
 
 # Job
 workflows:
