@@ -13,6 +13,10 @@ jobs:
       - store_artifacts:
           path: target
       - codecov/upload
+      - run:
+        command:
+            - mvn checkstyle:checkstyle
+            - cat checkstyle-result.xml
 
 # Job
 workflows:
