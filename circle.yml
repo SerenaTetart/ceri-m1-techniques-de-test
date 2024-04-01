@@ -17,6 +17,22 @@ jobs:
           command: mvn checkstyle:check
       - codecov/upload
 
+ checkstyle-job:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Run Checkstyle
+          command: mvn checkstyle:checkstyle
+      - store_artifacts:
+          path: target/checkstyle-result.xml
+      - run:
+          name: Generate Checkstyle Badge
+          command: echo "Checkstyle Passed" > checkstyle-badge.txt
+      - store_artifacts:
+          path: checkstyle-badge.txt
+
 # Job
 workflows:
   version: 2
@@ -26,3 +42,6 @@ workflows:
           filters:
             branches:
               only: master
+      - checkstyle-job:
+        requires:
+            - build-and-test
