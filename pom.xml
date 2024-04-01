@@ -72,13 +72,7 @@
 						<id>validate</id>
 						<phase>validate</phase>
 						<configuration>
-							<properties>
-								<property>
-									<name>tabWidth</name>
-									<value>4</value>
-								</property>
-								<!-- Autres propriétés de configuration Checkstyle -->
-							</properties>
+							<configLocation>sun_checks.xml</configLocation> <!-- Emplacement de votre fichier de configuration Checkstyle -->
 							<encoding>UTF-8</encoding>
 							<consoleOutput>true</consoleOutput>
 							<failsOnError>true</failsOnError>
