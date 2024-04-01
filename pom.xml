@@ -72,7 +72,13 @@
 						<id>validate</id>
 						<phase>validate</phase>
 						<configuration>
-							<configLocation>checkstyle.xml</configLocation> <!-- Emplacement de votre fichier de configuration Checkstyle -->
+							<properties>
+								<property>
+									<name>tabWidth</name>
+									<value>4</value>
+								</property>
+								<!-- Autres propriétés de configuration Checkstyle -->
+							</properties>
 							<encoding>UTF-8</encoding>
 							<consoleOutput>true</consoleOutput>
 							<failsOnError>true</failsOnError>
