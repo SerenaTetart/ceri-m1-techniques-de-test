@@ -30,6 +30,23 @@ jobs:
             - store_artifacts:
                 path: checkstyle-badge.txt
 
+    javadoc-job:
+        docker:
+          - image: circleci/openjdk:11-jdk
+        steps:
+            - checkout
+            - run:
+                name: Generate Javadoc
+                command: mvn javadoc:javadoc
+            - run:
+                name: Deploy Javadoc to GitHub Pages
+                command: |
+                  mkdir -p _site
+                  cp -R target/site/apidocs/* _site/
+
+                env:
+                  GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+
 # Job
 workflows:
     version: 2
@@ -40,5 +57,8 @@ workflows:
                     branches:
                         only: master
             - checkstyle-job:
+                requires:
+                    - build-and-test
+            - javadoc-job:
                 requires:
                     - build-and-test
