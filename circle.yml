@@ -41,16 +41,6 @@ jobs:
       - run:
           name: Generate Javadoc
           command: mvn javadoc:javadoc
-      - run:
-          name: Deploy Javadoc to GitHub Pages
-          command: |
-            git config --global user.email "serenalyw@hotmail.com"
-            git config --global user.name "SerenaTetart"
-            cd target/site/apidocs/fr/univavignon/pokedex/api
-            git init
-            git add .
-            git commit -m "Deploy Javadoc to GitHub Pages"
-            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/serenatetart/ceri-m1-techniques-de-test.git" master:gh-pages
 
 workflows:
   version: 2
