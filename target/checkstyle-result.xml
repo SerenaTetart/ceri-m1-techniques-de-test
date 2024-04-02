@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\IPokedex.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\IPokedexFactory.java">
+<error line="18" severity="error" message="La ligne excède 100 caractères (trouvé 106)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\IPokemonFactory.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\IPokemonMetadataProvider.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\IPokemonTrainerFactory.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\package-info.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\Pokedex.java">
+<error line="12" column="5" severity="error" message="&apos;VARIABLE_DEF&apos; doit être séparé de la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
+<error line="13" column="5" severity="error" message="&apos;VARIABLE_DEF&apos; doit être séparé de la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
+<error line="29" column="34" severity="error" message="Il manque une espace après &apos;-&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="29" column="34" severity="error" message="Il manque une espace avant &apos;-&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="66" severity="error" message="La ligne excède 100 caractères (trouvé 118)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokedexException.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokedexFactory.java">
+<error line="5" severity="error" message="La ligne excède 100 caractères (trouvé 110)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\Pokemon.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonComparators.java">
+<error line="21" column="9" severity="error" message="Il y a une espace de trop avant &apos;;&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonFactory.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonMetadata.java">
+<error line="34" severity="error" message="La ligne excède 100 caractères (trouvé 124)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonMetadataProvider.java">
+<error line="13" column="9" severity="error" message="Il manque une espace après &apos;for&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="18" column="5" severity="error" message="&apos;METHOD_DEF&apos; doit être séparé de la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
+<error line="21" severity="error" message="La ligne excède 100 caractères (trouvé 152)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonTrainer.java">
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokemonTrainerFactory.java">
+<error line="8" severity="error" message="La ligne excède 100 caractères (trouvé 129)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Seren\Desktop\Cours_Univ\Techniques_test\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\Team.java">
+</file>
+</checkstyle>
