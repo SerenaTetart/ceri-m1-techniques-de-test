@@ -1,6 +1,8 @@
 version: 2.1
+
 orbs:
   codecov: codecov/codecov@4.0.1
+
 jobs:
   build-and-test:
     docker:
@@ -12,7 +14,8 @@ jobs:
           command: mvn test
       - store_artifacts:
           path: target
-      - codecov/upload
+      - codecov/upload:
+          file: target/coverage.xml
 
   checkstyle-job:
     docker:
@@ -41,6 +44,8 @@ jobs:
       - name: Deploy Javadoc to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.1.4
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
           FOLDER: target/site/apidocs/fr/univavignon/pokedex/api
 
 workflows:
