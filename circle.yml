@@ -41,12 +41,16 @@ jobs:
       - run:
           name: Generate Javadoc
           command: mvn javadoc:javadoc
-      - name: Deploy Javadoc to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.1.4
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master
-          FOLDER: target/site/apidocs/fr/univavignon/pokedex/api
+      - run:
+          name: Deploy Javadoc to GitHub Pages
+          command: |
+            git config --global user.email "serenalyw@hotmail.com"
+            git config --global user.name "SerenaTetart"
+            cd target/site/apidocs/fr/univavignon/pokedex/api
+            git init
+            git add .
+            git commit -m "Deploy Javadoc to GitHub Pages"
+            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/serenatetart/ceri-m1-techniques-de-test.git" master:gh-pages
 
 workflows:
   version: 2
