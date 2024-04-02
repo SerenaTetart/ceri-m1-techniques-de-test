@@ -38,13 +38,12 @@ jobs:
             - run:
                 name: Generate Javadoc
                 command: mvn javadoc:javadoc
-            - run:
-                name: Deploy Javadoc to GitHub Pages
-                uses: JamesIves/github-pages-deploy-action@4.1.4
+            - name: Deploy Javadoc to GitHub Pages
+                uses: JamesIves/github-pages-deploy-action@v4.1.4
                 with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: master  # Remplacez "gh-pages" par le nom de votre branche GitHub Pages
-                  FOLDER: target/site/apidocs/fr/univavignon/pokedex/api  # Spécifiez ici le chemin de votre sous-dossier
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    BRANCH: master
+                    FOLDER: target/site/apidocs/fr/univavignon/pokedex/api
 
 # Job
 workflows:
