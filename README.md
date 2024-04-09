@@ -14,6 +14,16 @@ Groupe: M1 IA**
 
 [Couverture du code ](https://SerenaTetart.github.io/ceri-m1-techniques-de-test/target/site/jacoco/index.html)
 
+## Conclusion
+
+Tous les test sont réalisés avec une bonne couverture sauf peut être pour l'implémentation RocketFactory, que j'ai renommé en PokemonFactory afin de remplacer ce dernier, où lorsque l'index du pokemon créé est inférieur à 0 il n'y a pas de test pour vérifier si le pokemon est une fraude.
+
+Les outils de CI/CD en ligne tel que Codecov peuvent être trés long à se mettre à jour aprés un push, il est préférable de directement executer la commande "mvn test" et d'aller voir le rapport sur la couverture du code.
+
+J'aurai pu utiliser des Mock afin de réaliser des tests plus robustes, en effet si un test échoue cela peut avoir des répercusions en boule de neige sur le reste des tests.
+
+*Pour voir l'ancien PokemonFactory il faut retourner aux commits du "TP5 FINAL" au moins*
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
